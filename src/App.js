@@ -13,28 +13,25 @@ function App() {
 
   const [money, setMoney] = useState(20);
   const [btn, setBtn] = useState("btnBuy");
-  const [estVide, setEstVide] = useState(" est vide")
-  const [basket, setBasket] = useState([])
+  // const [estVide, setEstVide] = useState(" est vide")
+  // const [basket, setBasket] = useState([])
   const buy = (product) => {
-    //* LE "IF" POUR VOIR SI ON A ASSEZ D'ARGENT
+    // LE "IF" POUR VOIR SI ON A ASSEZ D'ARGENT
     if (money >= product.price) {
-      //* LE PRIX DIMUNUE EN FONCTION DE L'ARTICLE
-      setMoney(money - product.price)
-      //* LE STOCK DIMINUE
-      product.stock -= 1
-      product.unity += 1
+      setMoney(money - product.price) // L'ARGENT DIMUNUE EN FONCTION DE L'ARTICLE
+      product.stock -= 1  // LE STOCK DIMINUE
+      product.unity += 1 // LA QUANTITE ACHETEE AUGMENTE 
       // if (product.unity > 0) {
       //   setEstVide(" ")
       // }
     } else {
-      //* SI ON A PAS L'ARGENT LE BOUTON DISPARAIT
-      setBtn("hide")
+      setBtn("hide") // SI ON A PAS L'ARGENT LE BOUTON DISPARAIT
     }
   }
   const unbuy = (product) => {
-    setMoney(money + product.price)
-    product.stock += 1
-    product.unity -= 1
+    setMoney(money + product.price) // L'ARGENT AUGMENTE QUAND ON REMET UN PRODUIT
+    product.stock += 1 // LE STOCK AUGMENTE
+    product.unity -= 1 // LA QUANTITE ACHETEE DIMINUE
     // if (product.unity <= 0){
     //   setEstVide(" est vide")
     // }
@@ -52,11 +49,13 @@ function App() {
       </div> */}
       <h1 id='ancre'>{`Mon argent : ${money}€`}</h1>
       <div className="article">
-        {item.map((item, index) => (<Article item={item} key={index} id={item.id} buy={() => buy(item)} stock={item.stock} money={money} btn={btn} />))}
+        {item.map((item, index) => (<Article item={item} key={index} id={item.id} buy={() => buy(item)} stock={item.stock} money={money} btn={btn} />))} 
+        {/* LA BOUCLE POUR LES 3 ARTICLES */}
       </div>
       <h1>Mon panier: </h1>
       <div>
-        {item.map((item, index) => (<Panier item={item} key={index} unbuy={() => unbuy(item)} />))}
+        {item.map((item, index) => (<Panier item={item} key={index} unbuy={() => unbuy(item)} />))} 
+        {/* LA BOUCLE POUR L'AJOUT DANS LE PANIER */}
       </div>
     </div>
   );
