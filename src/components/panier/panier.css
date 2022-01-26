@@ -1,0 +1,40 @@
+.logo{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 10px;
+}
+.logoRight{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+.basket{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: rgb(255, 165, 0, 0.5);
+}
+.product{
+    display: flex;
+    align-items: center;
+}
+.imgBasket{
+    height: 100px;
+}
+
+.btnRendre{
+    cursor: pointer;
+    height: 50px;
+    padding: 10px;
+    margin-right: 10px;
+    font-family: 'Megrim', cursive;
+}
+/* .btnRendre:hover{
+    transform: scale(0);
+    
+} */

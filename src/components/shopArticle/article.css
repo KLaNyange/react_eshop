@@ -1,0 +1,98 @@
+.item {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.itemShort {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 30%;
+    height: 360px;
+}
+
+.Coca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Fanta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Tea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
+.imgProduct {
+    height: 200px;
+}
+
+.imgProduct:hover {
+    transform: scale(1.2);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btnBuy {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: peru;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Megrim', cursive;
+}
+
+.red {
+    background-color: red;
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 20px;
+}
+
+.orange {
+    background-color: orange;
+    padding-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .item {
+        width: 90%;
+    }
+    .img{
+        align-items: center;
+    }
+    img{
+        height: 100px;
+    }
+    .Coca{
+        flex-direction: row;
+    }
+    .Fanta{
+        flex-direction: row;
+    }
+    .Tea{
+        flex-direction: row;
+    }
+}
