@@ -29,12 +29,16 @@
 
 .btnRendre{
     cursor: pointer;
-    height: 50px;
+    height: 80px;
+    width: 80px;
     padding: 10px;
     margin-right: 10px;
     font-family: 'Megrim', cursive;
+    border: none;
+    border-radius: 20%;
 }
-/* .btnRendre:hover{
-    transform: scale(0);
-    
-} */
+.btnRendre:hover{
+    background-color: darkcyan;
+    border-radius: 50%;
+    color: white;
+}

@@ -10,6 +10,9 @@
     width: 30%;
     height: 360px;
 }
+.info{
+    padding: 10px;
+}
 
 .Coca {
     display: flex;
@@ -59,6 +62,10 @@
     border: none;
     border-radius: 10px;
     font-family: 'Megrim', cursive;
+}
+.btnBuy:hover {
+    background-color: rgb(143, 93, 44);
+    color: white
 }
 
 .red {

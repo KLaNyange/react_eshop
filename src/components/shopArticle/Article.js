@@ -7,7 +7,7 @@ function Article(props) {
                 <div className="img">
                     <img src={props.item.url} alt={`image de ${props.item.nom}`} className="imgProduct"/>
                 </div>
-                <div className={props.item.stock == 1 ? "orange" : " " && props.item.stock == 0 ? "red" : " "}>
+                <div className={props.item.stock == 1 ? "orange" : "info " && props.item.stock == 0 ? "red" : "info "}>
                     <h2>{props.item.nom}</h2>
                     <p>{`Prix: ${props.item.price}€`}</p>
                     <p>{`Stock: ${props.item.stock} unités`}</p>
